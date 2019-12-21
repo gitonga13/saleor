@@ -64,7 +64,7 @@ def test_create_fulfillment(
     assert data["fulfillmentOrder"] == 1
     assert data["status"] == FulfillmentStatus.FULFILLED.upper()
     assert data["trackingNumber"] == tracking
-    assert len(data["lines"]) == 1
+    assert len(data["lines"]) == 2
 
     assert mock_email_fulfillment.call_count == 1
 
